@@ -1,0 +1,217 @@
+.circle {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.outer-circle {
+  border-radius: 50%;
+  animation-duration: 1s;
+  animation-delay: .3s;
+  animation-name: outerCircleAnimation;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; /* Adjusted for a bouncier effect */
+}
+
+.inner-circle {
+  border-radius: 50%;
+  animation-name: innerCircleAnimation;
+  animation-timing-function: cubic-bezier(0, 0.89, 0, 1.57); /* Adjusted for a bouncier effect */
+  animation-duration: .5s;
+}
+
+.success {
+  animation-name: innerCircleAnimation;
+  animation-timing-function: cubic-bezier(00.32, 2.24, 1, 1.44); /* Adjusted for a bouncier effect */
+  animation-duration: .5s;
+}
+
+@keyframes outerCircleAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(7);
+    opacity: 0;
+  }
+}
+
+@keyframes innerCircleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  60%, 80% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.particle {
+  position: absolute;
+  /* background-color: yellow; Example color, adjust as needed */
+  /* border-radius: 50%; Makes it a circle */
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.particle-0 { animation-name: shootParticle-0; animation-delay: 0.2s; }
+.particle-1 { animation-name: shootParticle-1; animation-delay: 0.2s; }
+.particle-2 { animation-name: shootParticle-2; animation-delay: 0.3s; }
+.particle-3 { animation-name: shootParticle-3; animation-delay: 0.4s; }
+.particle-4 { animation-name: shootParticle-4; animation-delay: 0.5s; }
+.particle-5 { animation-name: shootParticle-5; animation-delay: 0.6s; }
+.particle-6 { animation-name: shootParticle-6; animation-delay: 0.4s; }
+.particle-7 { animation-name: shootParticle-7; animation-delay: 0.5s; }
+.particle-8 { animation-name: shootParticle-8; animation-delay: 0.3s; }
+.particle-9 { animation-name: shootParticle-9; animation-delay: 0.2s; }
+.particle-10 { animation-name: shootParticle-10; animation-delay: 0.2s; }
+.particle-11 { animation-name: shootParticle-11; animation-delay: 0.2s; }
+.particle-12 { animation-name: shootParticle-12; animation-delay: 0.3s; }
+.particle-13 { animation-name: shootParticle-13; animation-delay: 0.4s; }
+.particle-14 { animation-name: shootParticle-14; animation-delay: 0.5s; }
+.particle-15 { animation-name: shootParticle-15; animation-delay: 0.6s; }
+.particle-16 { animation-name: shootParticle-16; animation-delay: 0.4s; }
+.particle-17 { animation-name: shootParticle-17; animation-delay: 0.5s; }
+.particle-18 { animation-name: shootParticle-18; animation-delay: 0.3s; }
+.particle-19 { animation-name: shootParticle-19; animation-delay: 0.2s; }
+
+:root {
+  --base-translate-x: 40px;  /* Base value for x-axis translation */
+  --base-translate-y: 150px;  /* Base value for y-axis translation */
+}
+
+@keyframes shootParticle-0 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(var(--base-translate-x) * 2), calc(-1 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-1 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-1 * var(--base-translate-x) * 2), calc(-1.2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-2 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(2 * var(--base-translate-x) * 2), calc(-0.6 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-3 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-2 * var(--base-translate-x) * 2), calc(-0.8 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-4 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(2.5 * var(--base-translate-x) * 2), calc(-0.2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-5 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-2.5 * var(--base-translate-x) * 2), calc(-0.4 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-6 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(3 * var(--base-translate-x) * 2), calc(-0.6 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-7 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-3 * var(--base-translate-x) * 2), calc(-0.8 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-8 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(3.5 * var(--base-translate-x) * 2), calc(-0.2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-9 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-3.5 * var(--base-translate-x) * 2), calc(-1 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-10 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-1 * var(--base-translate-x) * 2), calc(2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-11 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(var(--base-translate-x) * 2), calc(2.4 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-12 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-2 * var(--base-translate-x) * 2), calc(1.2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-13 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(2 * var(--base-translate-x) * 2), calc(1.6 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-14 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-2.5 * var(--base-translate-x) * 2), calc(0.4 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-15 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(2.5 * var(--base-translate-x) * 2), calc(0.8 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-16 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-3 * var(--base-translate-x) * 2), calc(1.2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-17 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(3 * var(--base-translate-x) * 2), calc(1.6 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-18 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(-3.5 * var(--base-translate-x) * 2), calc(0.4 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+@keyframes shootParticle-19 {
+  0% { transform: scale(0); }
+  60% { opacity: 1; }
+  100% { transform: scale(1) translate(calc(3.5 * var(--base-translate-x) * 2), calc(2 * var(--base-translate-y) * 2)); opacity: 0; }
+}
+
+
+
+@keyframes shootParticle {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -200px) scale(1);
+    opacity: 0;
+  }
+}
